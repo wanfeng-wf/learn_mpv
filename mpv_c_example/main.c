@@ -34,10 +34,6 @@ int main(void)
 		return -1;
 	}
 
-	mpv_set_option_string(ctx, "idle", "yes");
-	mpv_set_option_string(ctx, "terminal", "no");
-	mpv_set_option_string(ctx, "audio-display", "no");
-
 	if (mpv_initialize(ctx) < 0) {
 		fprintf(stderr, "mpv_initialize failed\n");
 		mpv_terminate_destroy(ctx);
